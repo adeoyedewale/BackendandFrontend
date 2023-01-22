@@ -30,4 +30,4 @@ volumes:
   frontend_data:
     driver: local
     
- image: registry-https://hub.docker.com/backend:latest
+ image: registry-https://hub.docker.com/backend1:latest
