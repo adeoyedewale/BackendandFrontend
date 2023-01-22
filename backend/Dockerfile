@@ -8,7 +8,7 @@ RUN mkdir -p /usr/src/backend
 WORKDIR /usr/src/backend
 
 # Copy the package.json and package-lock.json
-COPY package*.json ./
+COPY backend/package*.json ./
 
 # Install dependencies
 RUN npm install
