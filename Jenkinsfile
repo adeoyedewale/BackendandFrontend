@@ -48,7 +48,7 @@ pipeline {
         
         stage('Push Images to Registry') {
             steps {
-                sh 'docker-compose push backend'
+                sh 'docker-compose push eruobodo/backend:$BUILD_NUMBER'
             }
         }
         stage('Deploy') {
