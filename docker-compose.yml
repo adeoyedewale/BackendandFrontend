@@ -24,9 +24,10 @@ services:
       - REACT_APP_BACKEND_URL=http://localhost:8080
     depends_on: 
       - backend
-    image: myname:latest
 volumes:
   backend_data:
     driver: local
   frontend_data:
     driver: local
+    
+ image: registry-https://hub.docker.com/backend:latest
