@@ -2,7 +2,7 @@
 FROM node:lts-alpine
 
 # Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /usr/src/backend
 
 # Copy the package.json and package-lock.json
 COPY package*.json ./
