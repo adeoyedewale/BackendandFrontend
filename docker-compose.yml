@@ -1,6 +1,5 @@
 version: '3'
 services:
-  image: registry-https://hub.docker.com/backend1:latest
   backend:
     build:
       context: .
@@ -12,6 +11,7 @@ services:
       - backend_data:/usr/src/backend
     environment:
       - NODE_ENV=production
+    image: registry-eruobodo/backend1:latest
   frontend:
     build:
       context: .
