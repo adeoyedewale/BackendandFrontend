@@ -1,5 +1,8 @@
 FROM node:14
 
+# Create a directory for the app
+RUN mkdir -p /usr/src/frontend
+
 # Set the working directory
 WORKDIR /usr/src/frontend
 
