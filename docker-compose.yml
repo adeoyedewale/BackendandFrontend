@@ -11,7 +11,7 @@ services:
       - backend_data:/usr/src/backend
     environment:
       - NODE_ENV=production
-  image: docker.io/eruobodo/backend1:latest
+    image: docker.io/eruobodo/backend2:latest
   frontend:
     build:
       context: .
