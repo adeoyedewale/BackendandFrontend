@@ -31,9 +31,24 @@ pipeline {
                 sh 'docker-compose build'
             }
         }
+        
+        stage('Login') {
+		
+              steps {
+                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login --username eruobodo --password-stdin'    
+              }
+		    }
+        
+     //   stage('Push') {
+
+     //         steps {
+     //            sh 'docker push eruobodo/mynewfrontendapp:${BUILD_NUMBER}'
+     //         }
+     //   }
+        
         stage('Push Images to Registry') {
             steps {
-                sh 'docker-compose push'
+                sh 'docker-compose push eruobodo/mynewfrontendandbackendapps:${BUILD_NUMBER}'
             }
         }
         stage('Deploy') {
@@ -42,4 +57,11 @@ pipeline {
             }
         }
     }
+    
+    post {
+        always {
+	    cleanWs()
+      	sh 'docker logout'
+        }
+   }
 }
