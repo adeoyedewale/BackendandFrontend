@@ -10,7 +10,7 @@ pipeline {
       
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/adeoyedewale/BackendFrontend.git'
+                git url: 'https://github.com/adeoyedewale/BackendandFrontend.git'
             }
         }
       
