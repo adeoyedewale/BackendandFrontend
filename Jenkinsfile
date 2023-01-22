@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Build Frontend') {
             steps {
-                sh 'cd frontend && npm install'
+                sh 'cd frontend && npm install && npm run build'
                 sh 'cd ..'
             }
         }
