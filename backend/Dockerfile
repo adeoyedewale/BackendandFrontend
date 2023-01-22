@@ -1,6 +1,9 @@
 # FROM node:14
 FROM node:lts-alpine
 
+# Create a directory for the app
+RUN mkdir -p /usr/src/backend
+
 # Set the working directory
 WORKDIR /usr/src/backend
 
