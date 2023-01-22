@@ -11,7 +11,7 @@ services:
       - backend_data:/usr/src/backend
     environment:
       - NODE_ENV=production
-    image: docker.io/eruobodo/backend2:latest
+    image: docker.io/eruobodo/backend:latest
   frontend:
     build:
       context: .
@@ -23,6 +23,7 @@ services:
       - frontend_data:/usr/src/frontend
     environment:
       - REACT_APP_BACKEND_URL=http://localhost:8080
+    image: docker.io/eruobodo/frontend:latest
     depends_on: 
       - backend
 volumes:
