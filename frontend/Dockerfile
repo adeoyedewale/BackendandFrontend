@@ -10,7 +10,7 @@ WORKDIR /usr/src/frontend
 #COPY build ./
 
 # Copy the package.json and package-lock.json
-COPY package*.json ./
+COPY frontend/package*.json ./
 
 # Install dependencies
 RUN npm install
