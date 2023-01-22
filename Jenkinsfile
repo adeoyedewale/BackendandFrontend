@@ -48,7 +48,7 @@ pipeline {
         
         stage('Push Images to Registry') {
             steps {
-                sh 'docker-compose push myname'
+                sh 'docker-compose push backend1'
             }
         }
         stage('Deploy') {
