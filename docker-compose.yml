@@ -24,7 +24,7 @@ services:
       - REACT_APP_BACKEND_URL=http://localhost:8080
     depends_on: 
       - backend
-    image: eruobodo/backend:latest
+    image: https://hub.docker.com/eruobdo/backend:$BUILD_NUMBER
 volumes:
   backend_data:
     driver: local
